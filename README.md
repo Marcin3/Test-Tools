@@ -7,6 +7,9 @@ Example: [/src/test/java/gui/junitparams](https://github.com/Marcin3/Test-Tools/
 more info:  
 https://github.com/Pragmatists/JUnitParams
 
-* BrowserMob Proxy
+* BrowserMob Proxy  
+Example : [/src/test/java/gui/browsermobproxy](https://github.com/Marcin3/Test-Tools/tree/master/src/test/java/gui/browsermobproxy) 
+more info:  
+https://github.com/lightbody/browsermob-proxy
 
 
