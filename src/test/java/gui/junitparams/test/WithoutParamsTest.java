@@ -20,7 +20,7 @@ public class WithoutParamsTest extends MyteslaSearch{
 
     @BeforeClass
     public static void init() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\E5410\\Documents\\Marcin\\Test-Tools\\src\\browser\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "..//Test-Tools/src/browser/chromedriver");
         driver =new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         driver.manage().window().maximize();
