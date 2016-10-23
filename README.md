@@ -1,6 +1,9 @@
 ## Test-Tools
 
 Here I want to store some basic info about tools which could be helpful for Selenium WebDriver.
+To this repo I added browser:
+geckodriver-v0.11.1-linux32
+ChromeDriver 2.24
 
 * JUnitParams:   
 Example: [/src/test/java/gui/junitparams](https://github.com/Marcin3/Test-Tools/tree/master/src/test/java/gui/junitparams)  
