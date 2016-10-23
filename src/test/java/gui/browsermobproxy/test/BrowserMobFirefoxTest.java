@@ -34,8 +34,7 @@ public class BrowserMobFirefoxTest extends BrowserMobFirefox{
     }
     @AfterClass
     public void tearDown() {
-        proxy.stop();
-        driver.close();
+        stopBMP();
     }
 
 }
