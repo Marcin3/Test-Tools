@@ -35,7 +35,8 @@ public class BrowserMobFirefox {
         driver = new FirefoxDriver(capabilities);
     }
     public void stopBMP() {
-        proxy.stop();
+        //proxy.stop();
         driver.close();
+        proxy.stop();
     }
 }
