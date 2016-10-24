@@ -2,6 +2,7 @@ package gui.browsermobproxy.test;
 
 import gui.browsermobproxy.utils.BrowserMobFirefox;
 import net.lightbody.bmp.core.har.Har;
+import org.openqa.selenium.By;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -25,6 +26,7 @@ public class BrowserMobFirefoxTest extends BrowserMobFirefox{
 
         // open yahoo.com
         driver.get("http://www.mytesla.com.pl/");
+        driver.findElement(By.id("menu-item-2112")).click();
 
         // get the HAR data
         Har har = proxy.getHar();
