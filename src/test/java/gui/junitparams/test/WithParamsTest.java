@@ -1,6 +1,7 @@
 package gui.junitparams.test;
 
 import gui.junitparams.pages.MyteslaSearch;
+import gui.junitparams.utils.ChromeBrowser;
 import junitparams.JUnitParamsRunner;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -24,11 +25,8 @@ public class WithParamsTest extends MyteslaSearch {
 
     @BeforeClass
     public static void init() {
-        System.setProperty("webdriver.chrome.driver", "..//Test-Tools/src/browser/chromedriver");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.get(baseUrl);
+        ChromeBrowser browser = new ChromeBrowser();
+        driver = browser.getDriverWithURL(baseUrl);
     }
 
     @AfterClass
