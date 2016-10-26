@@ -16,7 +16,7 @@ more info:
 https://github.com/lightbody/browsermob-proxy
 
 * Selenium TakesScreenshot   
-Example:  [/src/test/java/gui/browsermobproxy](https://github.com/Marcin3/Test-Tools/tree/master/src/test/java/gui/browsermobproxy) 
+Example:  [/src/test/java/gui/screenshottaker](https://github.com/Marcin3/Test-Tools/tree/master/src/test/java/gui/screenshottaker) 
 more info:  
 https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/TakesScreenshot.html
 
