@@ -1,26 +1,21 @@
-package gui.junitparams.test;
+package gui.junitparams;
 
-import gui.junitparams.pages.MyteslaSearch;
-import utils.browser.ChromeBrowser;
-import junitparams.JUnitParamsRunner;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.concurrent.TimeUnit;
+import junitparams.JUnitParamsRunner;
+import po.MyTeslaPO;
+import utils.browser.ChromeBrowser;
 
-import static org.junit.Assert.assertEquals;
-
-/**
- * Created by E5410 on 2016-10-23.
- */
 @RunWith(JUnitParamsRunner.class)
-public class WithParamsTest extends MyteslaSearch {
+public class WithParamsTest {
     public static WebDriver driver;
+
     private static final String baseUrl = "http://www.mytesla.com.pl/";
 
     @BeforeClass
@@ -39,15 +34,15 @@ public class WithParamsTest extends MyteslaSearch {
             "Tesla",
             "Supercharger",
             "Krakow" })
-    public void search(String mTextToSearch) {
+    public void search(String textToSearch) {
         // given
-        String textToSearch = mTextToSearch;
+        MyTeslaPO myTeslaPO = new MyTeslaPO();
 
         // when
-        searchMethod(driver, textToSearch);
+        myTeslaPO.searchPhrase(textToSearch);
 
         // then
-        assertEquals("Wyniki wyszukiwania: " + textToSearch, driver.findElement(By.cssSelector("h1.page-title")).getText());
+        assertEquals("Wyniki wyszukiwania: " + textToSearch, myTeslaPO.getPageTitle());
     }
 
 }
