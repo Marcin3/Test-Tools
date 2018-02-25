@@ -1,7 +1,7 @@
 package gui.junitparams.test;
 
 import gui.junitparams.pages.MyteslaSearch;
-import gui.junitparams.utils.ChromeBrowser;
+import utils.browser.ChromeBrowser;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;

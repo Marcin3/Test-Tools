@@ -2,13 +2,10 @@ package gui.junitparams.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Created by E5410 on 2016-10-23.
- */
 public class MyteslaSearch {
 
     public void searchMethod(WebDriver driver, String textToSearch) {

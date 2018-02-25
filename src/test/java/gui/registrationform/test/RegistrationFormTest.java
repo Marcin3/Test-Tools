@@ -1,7 +1,7 @@
 package gui.registrationform.test;
 
 import gui.registrationform.pages.RegistrationForm;
-import gui.registrationform.utils.ChromeBrowser;
+import utils.browser.ChromeBrowser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
