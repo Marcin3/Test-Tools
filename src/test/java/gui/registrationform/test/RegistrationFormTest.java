@@ -35,7 +35,7 @@ public class RegistrationFormTest extends RegistrationForm {
     public static void tearDown() { driver.close();}
 
     @Test(dataProvider = "differentAge" )
-    public void AgeBoundaryValueTest(String name, String surname, String email, int age, String phone, String comment) {
+    public void ageBoundaryValueTest(String name, String surname, String email, int age, String phone, String comment) {
         sendValueToNameField(driver, name);
         sendValueToSurnameField(driver, surname);
         sendValueToEmailField(driver, email);

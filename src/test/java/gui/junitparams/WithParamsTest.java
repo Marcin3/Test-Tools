@@ -16,12 +16,12 @@ import utils.browser.ChromeBrowser;
 public class WithParamsTest {
     public static WebDriver driver;
 
-    private static final String baseUrl = "http://www.mytesla.com.pl/";
+    private static final String BASE_URL = "http://www.mytesla.com.pl/";
 
     @BeforeClass
     public static void init() {
         ChromeBrowser browser = new ChromeBrowser();
-        driver = browser.getDriverWithURL(baseUrl);
+        driver = browser.getDriverWithURL(BASE_URL);
     }
 
     @AfterClass
