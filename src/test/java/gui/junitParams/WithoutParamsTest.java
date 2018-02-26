@@ -1,4 +1,4 @@
-package gui.junitparams;
+package gui.junitParams;
 
 import static org.junit.Assert.assertEquals;
 

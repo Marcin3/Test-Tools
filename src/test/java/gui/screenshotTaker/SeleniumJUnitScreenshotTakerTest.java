@@ -1,22 +1,22 @@
-package gui.junitparams;
-
-import static org.junit.Assert.assertEquals;
+package gui.screenshotTaker;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import junitparams.JUnitParamsRunner;
 import po.MyTeslaPO;
+import utils.SeleniumJUnitScreenshotTaker;
 import utils.browser.ChromeBrowser;
 
-@RunWith(JUnitParamsRunner.class)
-public class WithParamsTest {
+public class SeleniumJUnitScreenshotTakerTest {
     public static WebDriver driver;
 
     private static final String BASE_URL = "http://www.mytesla.com.pl/";
+
+    @Rule
+    public SeleniumJUnitScreenshotTaker seleniumJUnitScreenshotTaker = new SeleniumJUnitScreenshotTaker(driver);
 
     @BeforeClass
     public static void init() {
@@ -30,19 +30,15 @@ public class WithParamsTest {
     }
 
     @Test
-    @junitparams.Parameters({
-            "Tesla",
-            "Supercharger",
-            "Krakow" })
-    public void search(String textToSearch) {
-        // given
+    public void testShouldPass() {
         MyTeslaPO myTeslaPO = new MyTeslaPO();
+        myTeslaPO.checkModelsInTopMenu("MODEL S", "MODEL X", "MODEL 3");
+    }
 
-        // when
-        myTeslaPO.searchPhrase(textToSearch);
-
-        // then
-        assertEquals("Wyniki wyszukiwania: " + textToSearch, myTeslaPO.getPageTitle());
+    @Test
+    public void testShouldFail() {
+        MyTeslaPO myTeslaPO = new MyTeslaPO();
+        myTeslaPO.checkModelsInTopMenu("MODEL S", "MODEL X", "SpaceX");
     }
 
 }
