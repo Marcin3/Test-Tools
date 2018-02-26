@@ -38,6 +38,10 @@ public class MyTeslaPO {
         return pageTitle.getText();
     }
 
+    public void clickModel_3(){
+        model_3.click();
+    }
+
     public void checkModelsInTopMenu(String firstModel, String secondModel, String thirdModel) {
         assertEquals(model_S.getText(), firstModel);
         assertEquals(model_X.getText(), secondModel);
